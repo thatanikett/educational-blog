@@ -54,6 +54,7 @@ document.getElementById("commentBtn")?.addEventListener("click", () => {
         const commentSection = document.getElementById("comments");
         const newComment = document.createElement("p");
         newComment.textContent = comment;
+        alert("new comment added to the blog.");
         commentSection.appendChild(newComment);
         document.getElementById("comment").value = "";
     } else {

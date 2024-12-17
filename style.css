@@ -5,11 +5,13 @@ body {
   line-height: 1.6;
   background-color: rgb(255, 255, 233);
 }
+
 img {
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
+
 nav {
   background-color: #333;
   color: white;
@@ -20,7 +22,7 @@ nav {
 }
 
 nav .logo {
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 3em;
   font-weight: bold;
 }
@@ -37,6 +39,8 @@ nav ul li {
   font-size: 1.5em;
   padding: 10px 20px;
   margin: 0 10px;
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 nav ul li a {
@@ -45,19 +49,27 @@ nav ul li a {
   transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #f39c12;
+nav ul li:hover {
+  background-color: #f39c12; /* Background color changes on hover */
+  transform: scale(1.1); /* Button grows slightly */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a shadow effect */
 }
+
+nav ul li a:hover {
+  color: #fff; /* Text stays white for contrast */
+}
+
 
 .content {
   max-width: 1000px;
   margin: 20px auto;
   padding: 20px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
   border-radius: 5px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   text-align: left;
 }
+
 
 .content h1 {
   color: #333;
@@ -68,7 +80,8 @@ nav ul li a:hover {
 }
 
 .content h2 {
-  color: #555;
+  color: #272626;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2em;
   margin-bottom: 10px;
   border-bottom: 2px solid #ddd;
@@ -76,14 +89,16 @@ nav ul li a:hover {
 }
 
 .content h3 {
-  color: #444;
-  font-size: 1.2em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #282626;
+  font-size: 1.5em;
   margin-bottom: 5px;
 }
 
 .content p {
   margin-bottom: 15px;
-  color: #666;
+  font-size: 20px;
+  color: #342f2f;
 }
 
 .content ul {
@@ -177,4 +192,24 @@ nav ul li a:hover {
 .login-container p {
   font-size: 1.1em;
   margin-top: 10px;
+}
+/* Video background styling */
+.video-container {
+  position: fixed; /* Video covers the whole page */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Send it to the background */
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Center the video */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensure the video covers the entire screen */
 }
